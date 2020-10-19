@@ -1,0 +1,25 @@
+[
+	{
+		"pointOfInterest": {
+			"name": "Burger King",
+			"address": {
+				"address1": "Cc Campanar Valencia 3, Manuel De Falla,13",
+				"address2": null,
+				"city": "Anderson",
+				"state": "IN",
+				"zipCode": "46015",
+				"country": "US"
+			},
+			"geoLocation": {
+				"latitude": 39.476562,
+				"longitude": -0.40550736
+			},
+			"type": "ALL"
+		},
+		"center": {
+			"latitude": 39.47656,
+			"longitude": -0.405507
+		},
+		"distance": 0.0002561061
+	}
+]

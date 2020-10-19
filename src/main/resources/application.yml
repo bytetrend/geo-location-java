@@ -1,0 +1,42 @@
+server:
+  context-path: /
+
+spring:
+  data:
+    cassandra:
+      cluster:
+        contact-points: 172.22.0.3,172.22.0.2,172.22.0.4
+        port: 9042
+        keyspace-name: sandbox
+        dc: datacenter1
+        user-id:
+        password:
+        use-ssl: false
+  aop:
+    auto: false
+
+location:
+  loader:
+    file.read.max.records: 1000
+  search:
+    default.miles.radius: 25
+    maximum.addresses: 25
+  fastfood:
+    staging.directory: /home/db2admin/dev/code/geo-location/data
+    data.file: FastFoodRestaurants.csv
+  starbucks:
+    staging.directory: /home/db2admin/dev/code/geo-location/data
+    data.file: starbucks_stores_from_kaggle.csv
+
+  executor:
+    corePoolSize: 5
+    maxPoolSize: 10
+    queueCapacity: 100
+  database:
+    readTimeout: 8000
+    batch:
+      minReplicas: 3
+    insert:
+      batch:
+        consistency: "LOCAL_QUORUM"
+        maximumRows: 50
